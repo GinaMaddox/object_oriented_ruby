@@ -3,4 +3,4 @@ shoes2 = {:brand => "Adidas", :color =>"black", :price => 30}
 shoes3 = {:brand => "Cloud", :color =>"pink", :price => 40}
 
 p shoes1
-p "#{shoes1[:brand]}"
+p "#{shoes1[:brand]} shoes are $#{shoes1[:price]}"
