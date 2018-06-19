@@ -30,11 +30,11 @@ class Shoes
   end
 
   def print_item
-    p "The #{color} #{brand} shoes are priced at $#{price}."
+    p "The #{color} #{brand} shoes are priced at $#{price.to_i}."
   end
 
   def add_discount
-    @price /= 1.2
+    @price  = price/1.2
   end
 end
 
@@ -42,14 +42,14 @@ shoes1 = Shoes.new("Nike", "blue", 50)
 shoes2 = Shoes.new("Adidas", "black", 60)
 shoes3 = Shoes.new("Cloud", "pink", 70)
 
-#shoes1.print_item
-#shoes1.add_discount
-#shoes1.print_item
+shoes1.print_item
+shoes1.add_discount
+shoes1.print_item
 
 
-p shoes2.color
+#p shoes2.color
 shoes2.color = "white"
-p shoes2.color
+#p shoes2.color
 #shoes2.print_item
 #shoes3.print_item
 
