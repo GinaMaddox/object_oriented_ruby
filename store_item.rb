@@ -7,26 +7,14 @@
 
 
 class Shoes
+
+  attr_reader :brand, :color, :price
+  attr_writer :color
+
   def initialize (input_brand, input_color, input_price)
     @brand = input_brand
     @color = input_color
     @price = input_price
-  end
-
-  def brand
-    @brand
-  end
-
-  def color
-    @color
-  end
-
-  def color=(input_color)
-    @color = input_color
-  end
-
-  def price
-    @price
   end
 
   def print_item
