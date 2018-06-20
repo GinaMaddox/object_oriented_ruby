@@ -1,3 +1,13 @@
+
+module EmailReportable
+
+  def send_report
+    puts "Sending email..."
+    # use email sending library...
+    puts "Email sent!"
+  end
+end
+
 class Employee
   attr_reader :first_name, :last_name, :active
   attr_writer :active
@@ -10,7 +20,7 @@ class Employee
   end
 
   def print_info
-    puts "#{@first_name} #{@last_name} makes #{@salary} a year."
+    puts "#{@first_name} #{@last_name} makes $#{@salary} a year."
   end
 
   def give_annual_raise
@@ -45,10 +55,9 @@ class Manager < Employee
 
   def fire_all_employees
     @employees.each do|employee|
-    employee.active = false
+      employee.active = false
+    end
   end
-end
-    
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
@@ -63,3 +72,17 @@ p employee1.salary
 p "before firing"
 p employee1.active
 p employee2.active
+
+###############
+
+
+class Intern < Employee
+  include EmailReportable
+
+end
+
+intern1 = Intern.new(first_name: "Ingrid", last_name: "jndcd", salary: 0, active: true)
+
+
+intern1.print_info
+intern1.send_report
