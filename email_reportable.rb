@@ -1,11 +1,11 @@
 
 module Actualize
- module EmailReportable
+  module EmailReportable
 
-  def send_report
-    puts "Sending email..."
-    # use email sending library...
-    puts "Email sent!"
+    def send_report
+      puts "Sending email..."
+      # use email sending library...
+      puts "Email sent!"
+    end
   end
- end
 end
