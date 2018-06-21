@@ -3,7 +3,7 @@
 module Actualize
   class Manager < Employee
    attr_reader :employees
-  def initialize(input_options)
+    def initialize(input_options)
     super
     @employees = input_options[:employees]
   end
@@ -26,8 +26,8 @@ module Actualize
       employee.active = false
     end
   end
- end
 end
+
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 manager.print_info
